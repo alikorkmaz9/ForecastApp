@@ -20,14 +20,11 @@ class MyCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     public func configure(with model: ViewController.Model) {
-        //self.timeLabel.text = model.time
-        //self.image.image = UIImage(data: model.image)
-        //self.tempLabel.text = String(model.temp)
+        self.timeLabel.text = String(model.time)
+        self.image.kf.setImage(with: model.image)
+        self.tempLabel.text = String(model.temp)
     }
-    
-
 }

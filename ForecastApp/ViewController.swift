@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ViewController: UIViewController {
     
@@ -15,12 +16,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        for indexPath in 0...temperatures.count {
-            models.append(Model(time: time[indexPath], image: image.kf.setImage(with: imageUrl[indexPath]), temp: Double(temperatures[indexPath])))
-        }
         parse()
+        modelAdd()
         table.register(CollectionTableViewCell.nib(), forCellReuseIdentifier: CollectionTableViewCell.identifier)
         table.delegate = self
         table.dataSource = self
@@ -31,13 +28,19 @@ class ViewController: UIViewController {
 extension ViewController {
     struct Model {
         let time: String
-        let image: UIImageView
+        let image: URL
         let temp: Double
         
-        init(time: String, image: UIImageView, temp: Double) {
+        init(time: String, image: URL, temp: Double) {
             self.time = time
             self.image = image
             self.temp = temp
+        }
+    }
+    
+    func modelAdd() {
+        for indexPath in 0...temperatures.count-1 {
+            models.append(Model(time: time[indexPath], image: imageUrl[indexPath], temp: Double(temperatures[indexPath])))
         }
     }
 }
@@ -51,12 +54,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath) as! CollectionTableViewCell
+        cell.configure(with: models)
         return cell
-        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250.0
     }
-    
 }
