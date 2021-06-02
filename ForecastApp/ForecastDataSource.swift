@@ -9,7 +9,8 @@ import Foundation
 
 var cityName: String!
 var weatherDescription: String!
-
+var temperatures = [Int]()
+var time: String!
 //MARK: - Parsing
 extension ViewController {
     
@@ -36,9 +37,18 @@ extension ViewController {
                         if let descriptions = weathers.list {
                             for description in descriptions {
                                 weatherDescription = (description.weather![0].main)
+                                time = (description.weather![0].main)
                                 break
                             }
                             }
+                        if let temps = weathers.list {
+                            for temp in temps {
+                                if var dummy = temp.main!.temp! as? Int {
+                                    temperatures.append(dummy)
+                                }
+                            }
+                        }
+
                     }
                 } catch {
                     print("failed")

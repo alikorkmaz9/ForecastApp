@@ -65,7 +65,7 @@
                 <outlet property="collectionView" destination="DHb-Ov-D3n" id="dDN-E5-2hs"/>
                 <outlet property="descriptionLabel" destination="mHQ-bo-ULg" id="txM-eu-dVG"/>
             </connections>
-            <point key="canvasLocation" x="51" y="112"/>
+            <point key="canvasLocation" x="51" y="22"/>
         </tableViewCell>
     </objects>
     <resources>

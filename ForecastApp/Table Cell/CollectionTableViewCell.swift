@@ -9,6 +9,7 @@ import UIKit
 
 class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    var models = [ViewController.Model]()
     
     @IBOutlet var cityLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
@@ -19,14 +20,14 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
         return UINib(nibName: "CollectionTableViewCell", bundle: nil)
     }
     
-    func configure(with models: [Forecast]) {
+    func configure(with models: [ViewController.Model]) {
         self.models = models
         collectionView.reloadData()
     }
     
     @IBOutlet var collectionView: UICollectionView!
     
-    var models = [Forecast]()
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,6 +35,10 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
         
         cityLabel.text = cityName
         descriptionLabel.text = weatherDescription
+        
+        for indexPath in 0...temperatures.count {
+            
+        }
         
         collectionView.register(MyCollectionViewCell.nib(), forCellWithReuseIdentifier: MyCollectionViewCell.identifier)
         collectionView.delegate = self
@@ -52,6 +57,7 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCell.identifier, for: indexPath) as! MyCollectionViewCell
+        //cell.configure(with: models[indexPath.row])
         return cell
     }
     

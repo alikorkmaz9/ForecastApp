@@ -56,6 +56,11 @@
                 <constraint firstItem="b5Z-cX-VJd" firstAttribute="trailing" secondItem="Jss-Mz-L6g" secondAttribute="trailing" id="yrn-bU-zLK"/>
             </constraints>
             <size key="customSize" width="435" height="279"/>
+            <connections>
+                <outlet property="image" destination="yD3-jr-rwJ" id="NCj-Qc-zO2"/>
+                <outlet property="tempLabel" destination="Jss-Mz-L6g" id="68F-Xu-Ikf"/>
+                <outlet property="timeLabel" destination="b5Z-cX-VJd" id="VAW-ea-XyA"/>
+            </connections>
             <point key="canvasLocation" x="-76.08695652173914" y="1.6741071428571428"/>
         </collectionViewCell>
     </objects>

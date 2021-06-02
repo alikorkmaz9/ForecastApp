@@ -8,7 +8,10 @@
 import UIKit
 
 class MyCollectionViewCell: UICollectionViewCell {
-
+    @IBOutlet var timeLabel: UILabel!
+    @IBOutlet var image: UIImageView!
+    @IBOutlet var tempLabel: UILabel!
+    
     static let identifier = "MyCollectionViewCell"
     
     static func nib() -> UINib {
@@ -20,8 +23,10 @@ class MyCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    public func configure(with Model: Forecast) {
-        
+    public func configure(with model: ViewController.Model) {
+        //self.timeLabel.text = model.time
+        //self.image.image = UIImage(data: model.image)
+        //self.tempLabel.text = String(model.temp)
     }
     
 

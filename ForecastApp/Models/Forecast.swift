@@ -79,4 +79,5 @@ struct MainClass: Codable {
         case humidity
         case tempKf = "temp_kf"
     }
+
 }
