@@ -16,8 +16,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for indexPath in 0...temperatures.count-1 {
-            models.append(Model(time: time[indexPath], image: image[indexPath], temp: temperatures[indexPath]))
+        
+        for indexPath in 0...temperatures.count {
+            models.append(Model(time: time[indexPath], image: image.kf.setImage(with: imageUrl[indexPath]), temp: Double(temperatures[indexPath])))
         }
         parse()
         table.register(CollectionTableViewCell.nib(), forCellReuseIdentifier: CollectionTableViewCell.identifier)
@@ -30,10 +31,10 @@ class ViewController: UIViewController {
 extension ViewController {
     struct Model {
         let time: String
-        let image: String
+        let image: UIImageView
         let temp: Double
         
-        init(time: String, image: String, temp: Double) {
+        init(time: String, image: UIImageView, temp: Double) {
             self.time = time
             self.image = image
             self.temp = temp
