@@ -13,6 +13,12 @@
 		4741B02226664C8100236FFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4741B02026664C8100236FFA /* Main.storyboard */; };
 		4741B02426664C8300236FFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4741B02326664C8300236FFA /* Assets.xcassets */; };
 		4741B02726664C8300236FFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4741B02526664C8300236FFA /* LaunchScreen.storyboard */; };
+		476BC6922666DD3B00D8DBB0 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476BC6912666DD3A00D8DBB0 /* Forecast.swift */; };
+		476BC6A12667553600D8DBB0 /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476BC69F2667553600D8DBB0 /* CollectionTableViewCell.swift */; };
+		476BC6A22667553600D8DBB0 /* CollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 476BC6A02667553600D8DBB0 /* CollectionTableViewCell.xib */; };
+		476BC6AC266755A600D8DBB0 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476BC6AA266755A600D8DBB0 /* MyCollectionViewCell.swift */; };
+		476BC6AD266755A600D8DBB0 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 476BC6AB266755A600D8DBB0 /* MyCollectionViewCell.xib */; };
+		476BC6B626677FE300D8DBB0 /* ForecastDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476BC6B526677FE300D8DBB0 /* ForecastDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		4741B02326664C8300236FFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4741B02626664C8300236FFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4741B02826664C8300236FFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		476BC6912666DD3A00D8DBB0 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		476BC69F2667553600D8DBB0 /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
+		476BC6A02667553600D8DBB0 /* CollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionTableViewCell.xib; sourceTree = "<group>"; };
+		476BC6AA266755A600D8DBB0 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		476BC6AB266755A600D8DBB0 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
+		476BC6B526677FE300D8DBB0 /* ForecastDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +68,12 @@
 		4741B01926664C8100236FFA /* ForecastApp */ = {
 			isa = PBXGroup;
 			children = (
+				476BC6972667548700D8DBB0 /* Table Cell */,
+				476BC6962667547E00D8DBB0 /* Collection Cell */,
+				476BC6902666DD2900D8DBB0 /* Models */,
 				4741B01A26664C8100236FFA /* AppDelegate.swift */,
 				4741B01C26664C8100236FFA /* SceneDelegate.swift */,
+				476BC6B526677FE300D8DBB0 /* ForecastDataSource.swift */,
 				4741B01E26664C8100236FFA /* ViewController.swift */,
 				4741B02026664C8100236FFA /* Main.storyboard */,
 				4741B02326664C8300236FFA /* Assets.xcassets */,
@@ -65,6 +81,32 @@
 				4741B02826664C8300236FFA /* Info.plist */,
 			);
 			path = ForecastApp;
+			sourceTree = "<group>";
+		};
+		476BC6902666DD2900D8DBB0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				476BC6912666DD3A00D8DBB0 /* Forecast.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		476BC6962667547E00D8DBB0 /* Collection Cell */ = {
+			isa = PBXGroup;
+			children = (
+				476BC6AA266755A600D8DBB0 /* MyCollectionViewCell.swift */,
+				476BC6AB266755A600D8DBB0 /* MyCollectionViewCell.xib */,
+			);
+			path = "Collection Cell";
+			sourceTree = "<group>";
+		};
+		476BC6972667548700D8DBB0 /* Table Cell */ = {
+			isa = PBXGroup;
+			children = (
+				476BC69F2667553600D8DBB0 /* CollectionTableViewCell.swift */,
+				476BC6A02667553600D8DBB0 /* CollectionTableViewCell.xib */,
+			);
+			path = "Table Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,9 +166,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				476BC6AD266755A600D8DBB0 /* MyCollectionViewCell.xib in Resources */,
 				4741B02726664C8300236FFA /* LaunchScreen.storyboard in Resources */,
 				4741B02426664C8300236FFA /* Assets.xcassets in Resources */,
 				4741B02226664C8100236FFA /* Main.storyboard in Resources */,
+				476BC6A22667553600D8DBB0 /* CollectionTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +181,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				476BC6A12667553600D8DBB0 /* CollectionTableViewCell.swift in Sources */,
 				4741B01F26664C8100236FFA /* ViewController.swift in Sources */,
+				476BC6AC266755A600D8DBB0 /* MyCollectionViewCell.swift in Sources */,
 				4741B01B26664C8100236FFA /* AppDelegate.swift in Sources */,
+				476BC6922666DD3B00D8DBB0 /* Forecast.swift in Sources */,
+				476BC6B626677FE300D8DBB0 /* ForecastDataSource.swift in Sources */,
 				4741B01D26664C8100236FFA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
