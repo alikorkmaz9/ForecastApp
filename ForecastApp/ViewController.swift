@@ -16,9 +16,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //for indexPath in 0...temperatures.count-1 {
-        //models.append(Model(time: time[indexPath], image: image[indexPath], temp: temperatures[indexPath]))
-        //}
+        for indexPath in 0...temperatures.count-1 {
+            models.append(Model(time: time[indexPath], image: image[indexPath], temp: temperatures[indexPath]))
+        }
         parse()
         table.register(CollectionTableViewCell.nib(), forCellReuseIdentifier: CollectionTableViewCell.identifier)
         table.delegate = self
