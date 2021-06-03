@@ -21,6 +21,9 @@ class ViewController: UIViewController {
         table.register(CollectionTableViewCell.nib(), forCellReuseIdentifier: CollectionTableViewCell.identifier)
         table.delegate = self
         table.dataSource = self
+        
+        for i in 0...time.count-1 {
+        }
     }
 }
 
@@ -45,9 +48,12 @@ extension ViewController {
     }
 }
 
-
 //MARK: - TableView
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
@@ -62,3 +68,4 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return 250.0
     }
 }
+

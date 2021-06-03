@@ -25,6 +25,6 @@ class MyCollectionViewCell: UICollectionViewCell {
     public func configure(with model: ViewController.Model) {
         self.timeLabel.text = String(model.time)
         self.image.kf.setImage(with: model.image)
-        self.tempLabel.text = String(model.temp)
+        self.tempLabel.text = String(Int(model.temp)) + "°C"
     }
 }

@@ -29,9 +29,16 @@ extension ViewController {
                         // we re ok to Parse
                         if let dateTimes = weathers.list {
                             for dateTime in dateTimes {
-                                time.append(String(dateTime.dateTime))
+                                let unixConvertedDate = Date(timeIntervalSince1970: TimeInterval(dateTime.dateTime))
+                                let dateFormatter = DateFormatter()
+                                dateFormatter.dateStyle = .long
+                                dateFormatter.dateFormat = "EEEEE"
+                                dateFormatter.timeStyle = .none
+                                time.append(unixConvertedDate.dayOfTheWeek())
+                                
                             }
                         }
+                        
                         
                         if let city = weathers.city {
                             cityName = city.name
@@ -46,7 +53,7 @@ extension ViewController {
                         
                         if let temps = weathers.list {
                             for temp in temps {
-                                if var dummy = temp.main!.temp {
+                                if let dummy = temp.main!.temp {
                                     temperatures.append(dummy)
                                 }
                             }
@@ -66,6 +73,15 @@ extension ViewController {
                 }
             }
         }
+    }
+}
+
+//MARK: DateFormatter
+extension Date {
+    func dayOfTheWeek() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        return dateFormatter.string(from: self)
     }
 }
 

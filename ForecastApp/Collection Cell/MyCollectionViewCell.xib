@@ -16,26 +16,26 @@
                 <rect key="frame" x="0.0" y="0.0" width="435" height="279"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5Z-cX-VJd">
-                        <rect key="frame" x="34" y="155" width="69" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5Z-cX-VJd">
+                        <rect key="frame" x="34" y="155" width="97" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="b5Z-cX-VJd" secondAttribute="height" multiplier="2:1" constant="27" id="7bs-nn-cmp"/>
+                            <constraint firstAttribute="width" secondItem="b5Z-cX-VJd" secondAttribute="height" multiplier="2:1" constant="55" id="7bs-nn-cmp"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jss-Mz-L6g">
-                        <rect key="frame" x="34" y="239" width="69" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jss-Mz-L6g">
+                        <rect key="frame" x="34" y="239" width="97" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="Jss-Mz-L6g" secondAttribute="height" multiplier="2:1" id="6vK-CS-WKs"/>
+                            <constraint firstAttribute="width" secondItem="Jss-Mz-L6g" secondAttribute="height" multiplier="2:1" constant="55" id="6vK-CS-WKs"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yD3-jr-rwJ">
-                        <rect key="frame" x="34" y="185" width="69" height="46"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yD3-jr-rwJ">
+                        <rect key="frame" x="49" y="185" width="69" height="46"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="46" id="6lv-HY-qQx"/>
                             <constraint firstAttribute="width" constant="69" id="XKb-u1-9s2"/>
@@ -46,12 +46,12 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="yD3-jr-rwJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="34" id="OCn-6c-xey"/>
-                <constraint firstItem="b5Z-cX-VJd" firstAttribute="centerX" secondItem="yD3-jr-rwJ" secondAttribute="centerX" id="Srl-Jf-6JO"/>
+                <constraint firstItem="yD3-jr-rwJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="49" id="OCn-6c-xey"/>
+                <constraint firstItem="b5Z-cX-VJd" firstAttribute="centerX" secondItem="yD3-jr-rwJ" secondAttribute="centerX" constant="-1" id="Srl-Jf-6JO"/>
                 <constraint firstItem="yD3-jr-rwJ" firstAttribute="top" secondItem="b5Z-cX-VJd" secondAttribute="bottom" constant="9" id="imz-9S-EP9"/>
                 <constraint firstItem="Jss-Mz-L6g" firstAttribute="top" secondItem="yD3-jr-rwJ" secondAttribute="bottom" constant="8" id="sVO-YH-X3h"/>
                 <constraint firstItem="b5Z-cX-VJd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="34" id="tCY-nO-ONa"/>
-                <constraint firstAttribute="bottom" secondItem="Jss-Mz-L6g" secondAttribute="bottom" constant="20" id="vZY-Ng-Gkx"/>
+                <constraint firstAttribute="bottom" secondItem="Jss-Mz-L6g" secondAttribute="bottom" constant="19" id="vZY-Ng-Gkx"/>
                 <constraint firstItem="b5Z-cX-VJd" firstAttribute="leading" secondItem="Jss-Mz-L6g" secondAttribute="leading" id="xfD-Q9-fBP"/>
                 <constraint firstItem="b5Z-cX-VJd" firstAttribute="trailing" secondItem="Jss-Mz-L6g" secondAttribute="trailing" id="yrn-bU-zLK"/>
             </constraints>

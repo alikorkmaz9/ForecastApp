@@ -10,6 +10,7 @@ import UIKit
 class CollectionTableViewCell: UITableViewCell {
     
     var models = [ViewController.Model]()
+    
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var cityLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
