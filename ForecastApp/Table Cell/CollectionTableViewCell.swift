@@ -14,6 +14,7 @@ class CollectionTableViewCell: UITableViewCell {
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var cityLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var avgTempLabel: UILabel!
     
     static let identifier = "CollectionTableViewCell"
     
@@ -24,8 +25,8 @@ class CollectionTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        cityLabel.text = cityName
         descriptionLabel.text = weatherDescription
+        avgTempLabel.text = avgTemp + "°C"
         
         collectionView.register(MyCollectionViewCell.nib(), forCellWithReuseIdentifier: MyCollectionViewCell.identifier)
         collectionView.delegate = self
@@ -55,6 +56,6 @@ extension CollectionTableViewCell: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 250, height: 250)
+        return CGSize(width: 140, height: 220)
     }
 }

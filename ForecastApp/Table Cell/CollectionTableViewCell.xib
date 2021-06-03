@@ -33,12 +33,6 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jd5-9h-0p5">
-                        <rect key="frame" x="220" y="7" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHQ-bo-ULg">
                         <rect key="frame" x="220" y="29" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -51,17 +45,15 @@
                     <constraint firstItem="mHQ-bo-ULg" firstAttribute="centerX" secondItem="DHb-Ov-D3n" secondAttribute="centerX" id="1Bo-to-UGX"/>
                     <constraint firstAttribute="bottom" secondItem="DHb-Ov-D3n" secondAttribute="bottom" id="PdU-1v-CLB"/>
                     <constraint firstItem="mHQ-bo-ULg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="29" id="QZu-co-Vq0"/>
-                    <constraint firstItem="mHQ-bo-ULg" firstAttribute="top" secondItem="Jd5-9h-0p5" secondAttribute="bottom" constant="1" id="RBC-z1-rfm"/>
                     <constraint firstItem="mHQ-bo-ULg" firstAttribute="leading" secondItem="d29-zE-kHs" secondAttribute="leading" id="Sj3-Jg-JKS"/>
                     <constraint firstItem="DHb-Ov-D3n" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="c0y-Lg-TM0"/>
                     <constraint firstItem="DHb-Ov-D3n" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="cTP-A6-iZ4"/>
                     <constraint firstItem="mHQ-bo-ULg" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="p1d-RZ-eO6"/>
-                    <constraint firstItem="mHQ-bo-ULg" firstAttribute="leading" secondItem="Jd5-9h-0p5" secondAttribute="leading" id="qDi-MI-U3h"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="cityLabel" destination="Jd5-9h-0p5" id="Ad3-Sx-TDH"/>
+                <outlet property="avgTempLabel" destination="d29-zE-kHs" id="c21-tv-bf0"/>
                 <outlet property="collectionView" destination="DHb-Ov-D3n" id="dDN-E5-2hs"/>
                 <outlet property="descriptionLabel" destination="mHQ-bo-ULg" id="txM-eu-dVG"/>
             </connections>

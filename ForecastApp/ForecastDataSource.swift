@@ -9,6 +9,7 @@ import Foundation
 
 var cityName: String!
 var weatherDescription: String!
+var avgTemp: String!
 var temperatures = [Double]()
 var time = [String]()
 var imageUrl = [URL]()
@@ -39,7 +40,6 @@ extension ViewController {
                             }
                         }
                         
-                        
                         if let city = weathers.city {
                             cityName = city.name
                         }
@@ -48,6 +48,15 @@ extension ViewController {
                             for description in descriptions {
                                 weatherDescription = (description.weather![0].main)
                                 break
+                            }
+                        }
+                        
+                        if let temps = weathers.list {
+                            for temp in temps {
+                                if let nowTemp = temp.main!.temp {
+                                    avgTemp = String(Int(nowTemp))
+                                    break
+                                }
                             }
                         }
                         

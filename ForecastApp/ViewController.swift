@@ -18,12 +18,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         parse()
         modelAdd()
+        setupNavBar()
         table.register(CollectionTableViewCell.nib(), forCellReuseIdentifier: CollectionTableViewCell.identifier)
         table.delegate = self
         table.dataSource = self
-        
-        for i in 0...time.count-1 {
-        }
     }
 }
 
@@ -40,7 +38,17 @@ extension ViewController {
             self.temp = temp
         }
     }
-    
+    func setupNavBar () {
+        title = cityName
+        navigationController?.hidesBarsOnSwipe = false
+        navigationController?.navigationBar.prefersLargeTitles = true
+        let attrs = [NSAttributedString.Key.foregroundColor: UIColor.label, NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .title1)]
+        
+        navigationController?.navigationBar.largeTitleTextAttributes = attrs
+
+        navigationItem.leftBarButtonItems = []
+        
+    }
     func modelAdd() {
         for indexPath in 0...temperatures.count-1 {
             models.append(Model(time: time[indexPath], image: imageUrl[indexPath], temp: Double(temperatures[indexPath])))
@@ -50,9 +58,6 @@ extension ViewController {
 
 //MARK: - TableView
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
@@ -65,7 +70,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250.0
+        return 200.0
     }
 }
 
