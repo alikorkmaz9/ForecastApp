@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		476BC6AC266755A600D8DBB0 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476BC6AA266755A600D8DBB0 /* MyCollectionViewCell.swift */; };
 		476BC6AD266755A600D8DBB0 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 476BC6AB266755A600D8DBB0 /* MyCollectionViewCell.xib */; };
 		476BC6B626677FE300D8DBB0 /* ForecastDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476BC6B526677FE300D8DBB0 /* ForecastDataSource.swift */; };
+		47FD95C2266919450042608B /* ForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FD95C1266919450042608B /* ForecastViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		476BC6AA266755A600D8DBB0 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		476BC6AB266755A600D8DBB0 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
 		476BC6B526677FE300D8DBB0 /* ForecastDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDataSource.swift; sourceTree = "<group>"; };
+		47FD95C1266919450042608B /* ForecastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewModel.swift; sourceTree = "<group>"; };
 		B954A8DD979AF1D2C416ECAF /* Pods_ForecastApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForecastApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -83,13 +85,11 @@
 		4741B01926664C8100236FFA /* ForecastApp */ = {
 			isa = PBXGroup;
 			children = (
-				476BC6972667548700D8DBB0 /* Table Cell */,
-				476BC6962667547E00D8DBB0 /* Collection Cell */,
+				47FD95C4266919B40042608B /* API_Service */,
 				476BC6902666DD2900D8DBB0 /* Models */,
-				4741B01A26664C8100236FFA /* AppDelegate.swift */,
-				4741B01C26664C8100236FFA /* SceneDelegate.swift */,
-				476BC6B526677FE300D8DBB0 /* ForecastDataSource.swift */,
-				4741B01E26664C8100236FFA /* ViewController.swift */,
+				47FD95BE266918420042608B /* View */,
+				47FD95BF266918870042608B /* Common */,
+				47FD95C02669190C0042608B /* ViewModels */,
 				4741B02026664C8100236FFA /* Main.storyboard */,
 				4741B02326664C8300236FFA /* Assets.xcassets */,
 				4741B02526664C8300236FFA /* LaunchScreen.storyboard */,
@@ -124,13 +124,47 @@
 			path = "Table Cell";
 			sourceTree = "<group>";
 		};
+		47FD95BE266918420042608B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4741B01E26664C8100236FFA /* ViewController.swift */,
+				476BC6962667547E00D8DBB0 /* Collection Cell */,
+				476BC6972667548700D8DBB0 /* Table Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		47FD95BF266918870042608B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4741B01A26664C8100236FFA /* AppDelegate.swift */,
+				4741B01C26664C8100236FFA /* SceneDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		47FD95C02669190C0042608B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				47FD95C1266919450042608B /* ForecastViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		47FD95C4266919B40042608B /* API_Service */ = {
+			isa = PBXGroup;
+			children = (
+				476BC6B526677FE300D8DBB0 /* ForecastDataSource.swift */,
+			);
+			path = API_Service;
+			sourceTree = "<group>";
+		};
 		9E8AFF36A24C6DB3F2F30D63 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				0C45BCF31224B1C97D1B9181 /* Pods-ForecastApp.debug.xcconfig */,
 				1BF0922BEEE0B11577D016A6 /* Pods-ForecastApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -255,6 +289,7 @@
 				476BC6AC266755A600D8DBB0 /* MyCollectionViewCell.swift in Sources */,
 				4741B01B26664C8100236FFA /* AppDelegate.swift in Sources */,
 				476BC6922666DD3B00D8DBB0 /* Forecast.swift in Sources */,
+				47FD95C2266919450042608B /* ForecastViewModel.swift in Sources */,
 				476BC6B626677FE300D8DBB0 /* ForecastDataSource.swift in Sources */,
 				4741B01D26664C8100236FFA /* SceneDelegate.swift in Sources */,
 			);

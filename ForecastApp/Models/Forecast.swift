@@ -38,7 +38,6 @@ struct Forecast: Codable {
         case pop
         case sys
         case dateText = "dt_txt"
-        
     }
 }
 
@@ -79,5 +78,4 @@ struct MainClass: Codable {
         case humidity
         case tempKf = "temp_kf"
     }
-    
 }
